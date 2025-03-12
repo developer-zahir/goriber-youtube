@@ -1,11 +1,4 @@
-<p align="center">
-<h1> <span style="color:red;">Goriber</span> YouTube </h1>
-</p>
-<p align="center" style="font-size: 24px;">
-  PH Tube is a web-based video streaming application where users can browse and watch videos sorted by categories such as music, comedy, and tutorials.
-</p>
 
-<hr/>
 <p align="center" style="font-size: 34px; font-weight:bold">
  REST API
 </p>
