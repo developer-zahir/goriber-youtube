@@ -60,6 +60,7 @@ loadCategory();
 
 // Load category videos
 function loadCategoryVideos(id) {
+  showLoader ();
   const url = `https://openapi.programming-hero.com/api/phero-tube/category/${id}`;
   fetch(url)
     .then((res) => res.json())
@@ -97,6 +98,7 @@ function displayVideo(videos) {
         </div>
         
     `;
+    hideLoader()
     return;
   }
   videos.map((video) => {
