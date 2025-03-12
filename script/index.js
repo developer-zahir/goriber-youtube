@@ -1,8 +1,7 @@
-
 // Loding funconality
-function showLoader (){
-  document.getElementById("loader").classList.remove("hidden")
-  document.getElementById("video_wrapper").classList.add("hidden")
+function showLoader() {
+  document.getElementById("loader").classList.remove("hidden");
+  document.getElementById("video_wrapper").classList.add("hidden");
 }
 function hideLoader() {
   setTimeout(() => {
@@ -11,20 +10,17 @@ function hideLoader() {
   }, 1000); // 3-second delay
 }
 
-
-
-
-
 // Search functionality
-document.getElementById("search_input").addEventListener("keyup", (e) => {
-  const searchValue = e.target.value;
-  console.log(searchValue);
-  loadVideo(searchValue);
+// Search functionality
+document.getElementById("search_input").addEventListener("input", (e) => {
+  const searchValue = e.target.value.trim(); // Trim whitespace
+
+  if (searchValue === "") {
+    loadVideo(); // Load default videos when search is cleared
+  } else {
+    loadVideo(searchValue); // Load filtered videos
+  }
 });
-
-
-
-
 
 // Category load and show
 function removeActiveClass() {
@@ -57,13 +53,9 @@ function displayCategories(categories) {
 
 loadCategory();
 
-
-
-
-
 // Load category videos
 function loadCategoryVideos(id) {
-  showLoader ();
+  showLoader();
   const url = `https://openapi.programming-hero.com/api/phero-tube/category/${id}`;
   fetch(url)
     .then((res) => res.json())
@@ -74,13 +66,9 @@ function loadCategoryVideos(id) {
     });
 }
 
-
-
-
-
 // Video load and show function
 function loadVideo(searchValue = "") {
-  showLoader ();
+  showLoader();
   fetch(`https://openapi.programming-hero.com/api/phero-tube/videos?title=${searchValue}`)
     .then((videos) => videos.json())
     .then((data) => displayVideo(data.videos));
@@ -101,7 +89,7 @@ function displayVideo(videos) {
         </div>
         
     `;
-    hideLoader()
+    hideLoader();
     return;
   }
   videos.map((video) => {
@@ -139,14 +127,10 @@ function displayVideo(videos) {
    </div>  
     `;
     videoWrapper.appendChild(videoItem);
-    hideLoader()
+    hideLoader();
   });
 }
 loadVideo();
-
-
-
-
 
 // loadVideoDetails
 function loadVideoDetails(id) {
