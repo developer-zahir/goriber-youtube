@@ -8,7 +8,7 @@ function hideLoader() {
   setTimeout(() => {
     document.getElementById("loader").classList.add("hidden");
     document.getElementById("video_wrapper").classList.remove("hidden");
-  }, 3000); // 3-second delay
+  }, 1000); // 3-second delay
 }
 
 
