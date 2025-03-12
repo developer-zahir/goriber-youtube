@@ -119,7 +119,7 @@ function displayVideo(videos) {
        <div class="p-4">
    
            <div class="flex space-x-3">
-               <img src="${video.authors[0].profile_picture}" alt="Author" class="w-10 h-10 object-cover rounded-full ring ring-2 ring-red-500">
+               <img src="${video.authors[0].profile_picture}" alt="Author" class="w-10 h-10 object-cover rounded-full  ring-2 ring-red-500">
                <div>
                    <h3 class="font-semibold text-lg -mt-1">${video.title}</h3>
                    <div class="flex items-center space-x-2 mt-0">
