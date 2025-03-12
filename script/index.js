@@ -4,10 +4,13 @@ function showLoader (){
   document.getElementById("loader").classList.remove("hidden")
   document.getElementById("video_wrapper").classList.add("hidden")
 }
-function hideLoader (){
-  document.getElementById("loader").classList.add("hidden")
-  document.getElementById("video_wrapper").classList.remove("hidden")
+function hideLoader() {
+  setTimeout(() => {
+    document.getElementById("loader").classList.add("hidden");
+    document.getElementById("video_wrapper").classList.remove("hidden");
+  }, 3000); // 3-second delay
 }
+
 
 
 
