@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Goriber YouTube- Video Sharing Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm py-4">
+      <div class="container mx-auto px-4 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+          <span class="text-red-500 text-2xl font-bold">Goriber</span>
+          <span class="text-2xl font-bold">YouTube</span>
+        </div>
+        <div class="search-box">
+          <label
+            class="input border border-gray-200 outline-0 w-[400px] hover:shadow-none focus-within:border-red-500 focus:shadow-none transition-all"
+          >
+            <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+              </g>
+            </svg>
+            <input type="search" id="search_input" required placeholder="Search" class="outline-none" />
+          </label>
+        </div>
+        <div class="flex items-center space-x-4">
+          <button class="bg-gray-200 px-4 py-2 rounded-md">Sort by view</button>
+          <a href="#" class="bg-red-500 text-white px-4 py-2 rounded-md">Blog</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Categories -->
+    <div class="container mx-auto px-4 py-6">
+      <div id="category_wrapper" class="flex justify-center space-x-4">
+        <div><button id="btn-all" onclick="loadVideo()" class="active bg-gray-200 px-6 py-2 rounded-md">All</button></div>
+      </div>
+    </div>
+
+    <div id="loader" class="hidden">
+      <div class="flex justify-center h-[80dvh]">
+        <span class="loading loading-spinner text-secondary w-10"></span>
+      </div>
+    </div>
+
+    <!-- Video Grid -->
+    <div class="container mx-auto px-4 py-6">
+      <div id="video_wrapper" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+    </div>
+
+    <!-- video details modal -->
+    <dialog id="videoDetailsModal" class="modal"></dialog>
+    <script src="./script/index.js"></script>
+    <script src="./script/utility.js"></script>
+  </body>
+</html>
