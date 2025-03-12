@@ -11,15 +11,9 @@ function hideLoader() {
 }
 
 // Search functionality
-// Search functionality
 document.getElementById("search_input").addEventListener("input", (e) => {
-  const searchValue = e.target.value.trim(); // Trim whitespace
-
-  if (searchValue === "") {
-    loadVideo(); // Load default videos when search is cleared
-  } else {
-    loadVideo(searchValue); // Load filtered videos
-  }
+  const searchValue = e.target.value.trim(); 
+  loadVideo(searchValue); 
 });
 
 // Category load and show
