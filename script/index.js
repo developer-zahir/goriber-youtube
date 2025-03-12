@@ -163,7 +163,7 @@ function showVideoDetails(videoDetails) {
       <p class="py-4 line-clamp-5 overflow-hidden pb-0">${videoDetails.description}</p>
       <div class="modal-action">
         <form method="dialog">
-          <button class="btn">Close</button>
+          <button class="btn text-[#ef4444] font-semibold uppercase">Close</button>
         </form>
       </div>
     </div>
