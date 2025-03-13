@@ -11,7 +11,7 @@
   <body class="bg-gray-100">
     <!-- Navigation -->
     <nav class="bg-white shadow-sm py-4">
-      <div class="container mx-auto px-4 flex justify-between items-center">
+      <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
         <a href="https://developer-zahir.github.io/goriber-youtube/">
           <div class="flex items-center gap-2 uppercase hover:opacity-90 cursor-pointer">
             <span class="text-red-500 text-2xl font-bold">Goriber</span>
@@ -20,7 +20,7 @@
         </a>
         <div class="search-box">
           <label
-            class="input border border-gray-200 outline-0 w-[400px] h-11 hover:shadow-none focus-within:border-red-500 focus:shadow-none transition-all"
+            class="input border border-gray-200 outline-0 md:w-[400px] md:h-11 hover:shadow-none focus-within:border-red-500 focus:shadow-none transition-all"
           >
             <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor">
@@ -31,7 +31,7 @@
             <input type="search" id="search_input" required placeholder="Search" class="outline-none" />
           </label>
         </div>
-        <div class="flex items-center space-x-4">
+        <div class="hidden  md:flex items-center space-x-4">
           <button class="bg-gray-200 px-4 py-2 rounded-md">Sort by view</button>
           <a href="#" class="bg-red-500 text-white px-4 py-2 rounded-md">Blog</a>
         </div>
