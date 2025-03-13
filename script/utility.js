@@ -7,13 +7,13 @@ function getVideoUploadTime(postTime) {
 
   // Handle the time formatting with the new units
   if (years) {
-    return `${years} years ${months} months ago`;
+    return `${years} years ago`;
   } else if (months) {
-    return `${months} months ${days} days ago`;
+    return `${months} months ago`;
   } else if (days) {
-    return `${days} days ${hours} hrs ${minutes} min ago`;
+    return `${days} days ago`;
   } else if (hours) {
-    return `${hours} hrs ${minutes} min ago`;
+    return `${hours} hrs ago`;
   } else if (minutes) {
     return `${minutes} min ago`;
   } else {

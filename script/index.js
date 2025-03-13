@@ -38,9 +38,10 @@ function displayCategories(categories) {
   for (const cat of categories) {
     const categoryButton = document.createElement("div");
     categoryButton.innerHTML = `
-     <button id="btn-${cat.category_id}" onclick="loadCategoryVideos(${cat.category_id})"  class="bg-gray-200 px-6 py-2 rounded-md"> ${cat.category} </button>
+     <button id="btn-${cat.category_id}" onclick="loadCategoryVideos(${cat.category_id})"  class="bg-gray-200 px-6 py-2 rounded-md">
+      ${cat.category} 
+     </button>
     `;
-
     categoryWrapper.appendChild(categoryButton);
   }
 }
@@ -81,7 +82,6 @@ function displayVideo(videos) {
         <h2 class="text-3xl font-bold mt-3 text-gray-700">Video Not Found</h2>
         </div>
         </div>
-        
     `;
     hideLoader();
     return;
@@ -150,7 +150,6 @@ function showVideoDetails(videoDetails) {
         </form>
       </div>
     </div>
-
 `;
   modalContainer.showModal();
 }
